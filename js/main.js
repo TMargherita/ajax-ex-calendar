@@ -3,16 +3,8 @@ $(document).ready(function () {
   var date = moment("2018-01-01");
   renderCalendar(date);
 
+//chiamata ajax per riprendere il calendario del 2018
 
-  $.ajax(
-    {
-      "url":"https://flynn.boolean.careers/exercises/api/holidays?year=2018&month=0",
-      "data": {
-        "year": 2018,
-        "month": 0
-      }
-    }
-  );
 })
 
 
@@ -38,13 +30,14 @@ function renderCalendar(date) {
   for ( var i = 1; i <= dayInMonth; i++) {
 
     //creazione context
-    var week = {
-      day: i,
-      month: date.format("MMMM")
+    var data = {
+      "day": i,
+      "month": date.format("MMMM"),
+      "dateComplete": date.format("YYYY-MM-DD")
     };
 
     //creazione codice html
-    var html = template(week);
+    var html = template(data);
     //inserimento del codice nella pagina
     $(".list-days").append(html);
 
