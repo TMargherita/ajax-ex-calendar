@@ -1,0 +1,9 @@
+.wrapper {
+  width:  500px;
+  margin: auto;
+}
+
+.holiday {
+  color: red;
+  font-weight: bold;
+}
