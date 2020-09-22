@@ -21,8 +21,8 @@
       <ul class="list-days">
       </ul>
     </div>
-    <script id="days-template" type="text/x-handlebars-template">
-      <li class="day"> {{day}} {{month}}</li>
+    <script id="day-template" type="text/x-handlebars-template">
+      <li class="day" data-date-complete="{{dateComplete}}"> {{day}} {{month}} <span></span></li>
     </script>
     <script src="js/main.js" charset="utf-8"></script>
   </body>
